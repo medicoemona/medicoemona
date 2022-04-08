@@ -1,0 +1,11 @@
+{% include header.html %}
+
+<section class="product">
+  <img src="/src/img/{{page.image}}" alt="{{page.title}}" />
+  <div>
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+  </div>
+</section>
+
+{% include footer.html %}

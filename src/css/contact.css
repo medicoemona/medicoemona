@@ -1,0 +1,138 @@
+.contact {
+  padding: 9rem 3rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.contact form {
+  display: flex;
+  margin: 3rem 0 0;
+  justify-content: space-between;
+}
+
+.contact form > div {
+  width: calc(50% - 0.75rem);
+}
+
+form label {
+  display: block;
+  line-height: 1.5rem;
+  margin: 1.25rem 0 0.25rem;
+  font-weight: bold;
+}
+
+.select {
+  border-radius: 5px;
+}
+
+.select select,
+input,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 3rem;
+  height: 3rem;
+  padding: 0 1rem;
+  box-shadow: none;
+  border: none;
+  background: #eee;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.2s;
+  display: block;
+  width: 100%;
+  border: 0.125rem solid #eee;
+}
+.select select:focus,
+input:focus,
+textarea:focus {
+  border: 0.125rem solid #4bcaff;
+}
+
+textarea {
+  resize: none;
+  height: 15rem;
+  padding: 0.75rem 1rem;
+  line-height: 1.5rem;
+}
+
+.contact button {
+  margin: 1.5rem 0 0;
+  float: right;
+}
+
+/*
+  Adjusted from:
+  https://www.lugolabs.com/articles/style-select-html-element-with-css
+  */
+.select {
+  font-size: 1rem;
+  position: relative;
+  display: block;
+  background: #eee;
+}
+
+.select select {
+  /* outline: none; */
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 2rem;
+  color: #555;
+  cursor: pointer;
+  /*Overlay the arrow*/
+  position: relative;
+  z-index: 1000;
+  background: none;
+}
+
+/*Arrow icon*/
+.arrow {
+  position: absolute;
+  height: 0.5rem;
+  width: 0.5rem;
+  top: calc(50% - 0.25rem);
+  right: 1rem;
+  border: solid black;
+  border-width: 0 0.125rem 0.125rem 0;
+  padding: 0.125rem;
+  transform: rotate(45deg);
+  transition: all 0.2s;
+}
+
+.arrow_open {
+  transform: rotate(225deg);
+  top: calc(50%);
+}
+
+@media screen and (max-width: 1024px) {
+  .contact {
+    padding: 9rem 2rem;
+  }
+}
+
+@media screen and (max-width: 823px) {
+  .contact form {
+    flex-direction: column;
+  }
+
+  .contact form,
+  .contact input,
+  .contact textarea {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .contact form div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  .contact {
+    padding: 9rem 1rem;
+  }
+}
+

@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<h2 class="services_header">Zasebni zdravstveni zavod MedicoEmona</h2>
+<ul class="services" role="list">
+  <li class="med_category">
+    <img src="../src/img/zensko_srce.jpeg" alt="zdravnik drži srce" />
+    <a href="./zensko-srce/">
+      <h2>Prva kardiološka ambulanta in posvetovalnica za žensko srce</h2>
+      <p>
+        Prilagojen pristop, ki upošteva posebnosti varstva kardiovaskularnega
+        zdravja pri ženskah.
+      </p>
+    </a>
+  </li>
+  <li class="med_category">
+    <img
+      src="../src/img/inovativni_managerski_pregled.jpeg"
+      alt="Inovativna medicina"
+    />
+    <a href="./inovativni-managerski-pregledi/">
+      <h2>Novi managerski pregledi - inovativen in napreden koncept</h2>
+      <p>Managerski pregledi prihodnosti že danes.</p>
+    </a>
+  </li>
+  <li class="med_category">
+    <img
+      src="../src/img/ekspertni_managerski_pregled.jpeg"
+      alt="Inovativna medicina"
+    />
+    <a href="./ekspertni-managerski-pregledi/">
+      <h2>Ekspertni managerski pregledi</h2>
+      <p>
+        Specialni personalizirani pregledi pri vodilnih strokovnjakih na
+        posameznem področju.
+      </p>
+    </a>
+  </li>
+  <li class="med_category">
+    <img src="../src/img/longevity.jpeg" alt="Zdrava starost" />
+    <a href="./longevity/">
+      <h2>Longevity medical center</h2>
+      <p>
+        Odkrijte program Metuzalem - Personaliziran program za zdravo in dolgo
+        življenje.
+      </p>
+    </a>
+    </div>
+  </li>
+</ul>
+
+<section class="blog">
+  <h2>Doktor priporoča</h2>
+  <ol class="post_previews" role="list">
+    {% for item in site.posts limit:3 %}
+    <li>
+      <img src="../src/img/uploads/{{ item.image }}" alt="" /><a
+        class="link"
+        href="{{ item.url }}"
+        >{{ item.title }}</a
+      >
+    </li>
+    {% endfor %}
+  </ol>
+  <a class="link more" href="">Več priporočil</a>
+</section>

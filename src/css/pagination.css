@@ -1,0 +1,17 @@
+.pagination{
+  display: flex;
+  justify-content: center;
+}
+
+.pagination a{
+  padding: 0 1rem;
+  text-decoration: none;
+}
+
+.pagination_previous::before{
+  content: "← ";
+}
+
+.pagination_next::after{
+  content: " →";
+}

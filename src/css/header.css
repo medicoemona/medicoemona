@@ -1,0 +1,230 @@
+body{
+  padding-top: 6rem;
+}
+
+.topNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 6rem;
+  background: #ffffff;
+  border-bottom: 1px solid #ccc;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.topNav div {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  padding: 1rem 0;
+  z-index: 9999;
+}
+
+.logo img {
+  height: 6rem;
+  height: calc(6rem - 1px);
+}
+
+.topNav a {
+  display: flex;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* 
+  Navigation
+  ----------
+  */
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 3rem;
+  z-index: 9998;
+}
+
+nav a {
+  text-decoration: none;
+  color: #777;
+  padding: 1rem 2rem;
+}
+
+nav input[type='checkbox'] {
+  display: none;
+}
+
+nav label {
+  position: absolute;
+  right: 3rem;
+  top: 1.75rem;
+  cursor: pointer;
+  display: block;
+  width: 2.5rem; /*= 2x padding + .menuIcon width*/
+  height: 2.125rem; /*= 2x padding + .menuIcon height + abs(.menuIcon:before top) + .menuIcon:after top */
+  padding: 0.5rem; /* affordance */
+  border-radius: 5px;
+}
+
+nav label:hover {
+  background: #051e91;
+}
+
+nav label:hover .menuIcon,
+nav label:hover .menuIcon::before,
+nav label:hover .menuIcon::after {
+  background: #fff;
+}
+
+/* Burger icon */
+.menuIcon,
+.menuIcon::before,
+.menuIcon::after {
+  position: absolute;
+  display: block;
+  content: '';
+  background: #777;
+  height: 0.125rem;
+  width: 1.5rem;
+  border-radius: 0.125rem; /*this height*/
+}
+.menuIcon {
+  top: 1rem;
+  left: 0.5rem; /*=nav label padding */
+}
+.menuIcon::before {
+  transition: transform 0.2s;
+  top: -0.5rem;
+}
+.menuIcon::after {
+  top: 0.5rem;
+  transition: transform 0.2s;
+}
+
+/* X icon */
+nav input:checked ~ label .menuIcon {
+  background: none;
+}
+
+nav input:checked ~ label .menuIcon::before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+nav input:checked ~ label .menuIcon::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+/* Navigation items */
+nav ul {
+  display: none;
+  margin: 6rem 0 0;
+  list-style: none;
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+}
+
+nav li {
+  color: #777;
+  cursor: pointer;
+}
+nav li:hover {
+  background: #051e91;
+}
+nav li:hover a {
+  color: #fff;
+}
+nav li:last-child {
+  border: 0;
+}
+
+/* Toggle show hide */
+nav input:checked ~ ul {
+  display: block;
+  position: absolute;
+  right: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+@media screen and (max-width: 1024px) {
+  nav,
+  .topNav div {
+    padding: 0 2rem;
+  }
+
+  nav label,
+  nav input:checked ~ ul {
+    right: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 823px) {
+  .menuIcon,
+  .menuIcon::before,
+  .menuIcon::after {
+    height: 0.15rem;
+  }
+
+  nav label {
+    height: 2.175rem;
+  }
+}
+
+@media screen and (max-height: 410px) {
+  nav input:checked ~ ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  nav {
+    padding: 0;
+  }
+  .topNav div {
+    padding: 0 1rem;
+  }
+  nav label {
+    right: 1rem;
+  }
+  nav input:checked ~ ul {
+    right: 1rem;
+  }
+}
+
+@media (min-width: 980px) {
+  .topNav ul {
+    display: flex;
+    background: none;
+    margin: 1.25rem;
+    justify-content: flex-end;
+    position: relative;
+    right: -3rem;
+  }
+
+  .topNav label {
+    display: none;
+  }
+
+  .topNav li:hover {
+    border-radius: 5px;
+  }
+}

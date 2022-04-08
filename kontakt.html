@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+<section class="contact">
+  <h1>Naročanje preko spletnega obrazca</h1>
+  <form
+    action="https://formsubmit.co/07f590e02c4dc7846523eb0252de3c52"
+    method="POST"
+  >
+    <div>
+      <label for="ime">Ime in priimek</label>
+      <input
+        type="text"
+        name="ime"
+        id="ime"
+        required=""
+        placeholder="Vnesite vaše ime in priimek"
+      />
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        required=""
+        placeholder="Vnesite vaš e-mail naslov"
+      />
+      <label for="telefon">Telefon</label>
+      <input
+        type="tel"
+        name="telefon"
+        id="telefon"
+        required=""
+        placeholder="Vnesite vašo telefonsko številko"
+      />
+      <label for="naslov">Naslov</label>
+      <input
+        type="text"
+        name="naslov"
+        id="naslov"
+        required=""
+        placeholder="Vnesite ulico, poštno številko in ime pošte"
+      />
+    </div>
+    <div>
+      <label for="storitev">Storitev</label>
+      <div class="select">
+        <span class="arrow"></span>
+        <select name="storitev" id="storitev">
+          {% for item in site.products %}
+          <option>{{ item.title }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <label for="dodatno">Dodatne želje</label>
+      <textarea
+        name="dodatno"
+        id="dodatno"
+        cols="30"
+        rows="10"
+        placeholder="Vnesite dodatna želje ali morebitna vprašanja"
+      ></textarea>
+      <button type="submit" class="button">Pošlji</button>
+    </div>
+    <input type="hidden" name="_next" value="/narocanje-hvala/" />
+    <input type="hidden" name="_subject" value="Obrazec na spletni strani" />
+  </form>
+</section>

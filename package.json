@@ -1,0 +1,13 @@
+{
+  "name": "medicoemona",
+  "version": "1.0.0",
+  "description": "MedicoEmona website",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "jekyll build",
+    "dev": "jekyll serve"
+  },
+  "author": "Daniel Cobo (https://danielcobo.com/)",
+  "license": "UNLICENSED"
+}

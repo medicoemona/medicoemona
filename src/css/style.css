@@ -1,0 +1,21 @@
+@import url('general.css');
+@import url('header.css');
+@import url('med_category.css');
+@import url('blog.css');
+@import url('pagination.css');
+@import url('product.css');
+@import url('location.css');
+@import url('pricelist.css');
+@import url('contact.css');
+@import url('footer.css');
+
+@media screen and (max-width: 823px) {
+  html {
+    font-size: 0.875rem;
+  }
+
+  body {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}

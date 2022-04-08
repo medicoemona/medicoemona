@@ -1,0 +1,174 @@
+.blog{
+  padding: 0 0 4.5rem;
+}
+
+.blog h2{
+  font-size: 2.4rem;
+  padding: 6rem 0 4.5rem 3rem;
+}
+
+.blog img{
+  max-width: 100%;
+}
+
+.post_previews{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding:0 3rem 2.4rem;
+}
+
+.post_previews li{
+  margin-bottom: 1.5rem;
+}
+
+.more{
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+ .blog h2{
+   padding-left: 2rem;
+ }
+}
+
+@media screen and (max-width: 680px) {
+  .blog h2{
+    padding: 4.5rem 2rem 3rem;
+  }
+
+  .post_previews{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .blog h2{
+    padding: 4.5rem 1rem 3rem;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .post_previews{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*
+Post index
+----------
+*/
+.blog h1{
+  margin: 2.1rem 0;
+  text-align: center
+}
+
+
+/*
+Single Post
+-----------
+*/
+.post{
+  padding: 0 0 4.5rem;
+  min-height:70vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.post img{
+  max-width:100%;
+}
+
+.post div{
+  padding: 3rem 2rem;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  background: #FFF;
+  position: relative;
+}  
+
+.post h1{
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.post h1, 
+.post p {
+  max-width: 56rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .post_previews{
+    padding:0 2rem 2.4rem;
+  }
+
+  .post{
+    padding-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .post{
+    grid-template-columns: 1fr 1fr;
+    padding: 0 0 3rem;
+  }
+
+  .post div{
+    padding-top: 1.5rem;
+  }
+
+  .post img{
+    max-width:100%;
+    padding: 0 0 2.4rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .post{
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .post img{
+    max-width:100%;
+    padding: 0 0 2.4rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .post_previews{
+    padding:0 1rem 2.4rem;
+  }
+
+  .post{
+    padding-bottom: 0rem;
+  }
+
+  .post div{
+    padding: 3rem 1rem 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .post{
+    grid-template-columns: 1fr;
+  }
+
+  .post img{
+    max-width:100%;
+    padding: 0 0 2.4rem;
+    margin: -10% 0;
+  }
+
+  .post div{
+    display: block;
+    padding-top: 3rem;
+    background: rgba(255, 255, 255, 0.9)
+  }
+}

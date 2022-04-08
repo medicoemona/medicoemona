@@ -1,0 +1,11 @@
+permalink: /:title/ # Just title for post
+plugins: [jekyll-paginate]
+paginate: 2
+paginate_path: '/doktor-priporoca/stran/:num/'
+collections:
+  products:
+    output: true
+    permalink: /:name/
+    layout: product
+  posts:
+    permalink: /doktor-priporoca/:title/

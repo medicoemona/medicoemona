@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<section class="blog">
+  <h1>Doktor priporoča</h1>
+  <ol class="post_previews" role="list">
+    {% for post in paginator.posts %}
+    <li>
+      <img src="/src/img/uploads/{{ post.image }}" alt="" /><a
+        class="link"
+        href="{{ post.url }}"
+        >{{ post.title }}</a
+      >
+    </li>
+    {% endfor %}
+  </ol>
+
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="pagination_previous"
+      >Nazaj</a
+    >
+    {% endif %}
+    <span class="page_number">
+      Stran: {{ paginator.page }} od {{ paginator.total_pages }}
+    </span>
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="pagination_next">Naprej</a>
+    {% endif %}
+  </div>
+</section>
