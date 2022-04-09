@@ -34,6 +34,8 @@ collections:
     files:
       - name: 'settings'
         label: 'Nastavitve'
+        editor:
+          preview: false
         file: '_data/settings.yml'
         fields:
           - { label: Naslov na prvi strani, name: introTitle, widget: string }
