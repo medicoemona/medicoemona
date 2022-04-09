@@ -1,6 +1,6 @@
 permalink: /:title/ # Just title for post
 plugins: [jekyll-paginate]
-paginate: 2
+paginate: 9
 paginate_path: '/doktor-priporoca/stran/:num/'
 collections:
   products:
