@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h2 class="services_header">Zasebni zdravstveni zavod MedicoEmona</h2>
+<h2 class="services_header">{{site.data.settings.introTitle}}</h2>
 <ul class="services" role="list">
   <li class="med_category">
     <img src="../src/img/zensko_srce.jpeg" alt="zdravnik drži srce" />
@@ -51,7 +51,7 @@ layout: default
 </ul>
 
 <section class="blog">
-  <h2>Doktor priporoča</h2>
+  <h2>{{site.data.settings.blogTitle}}</h2>
   <ol class="post_previews" role="list">
     {% for item in site.posts limit:3 %}
     <li>
@@ -63,5 +63,5 @@ layout: default
     </li>
     {% endfor %}
   </ol>
-  <a class="link more" href="/doktor-priporoca">Več priporočil</a>
+  <a class="link more" href="/doktor-priporoca">{{site.data.settings.blogMore}}</a>
 </section>

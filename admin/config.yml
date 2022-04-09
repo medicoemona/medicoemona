@@ -29,3 +29,13 @@ collections:
       - { label: 'Ime storitve', name: 'title', widget: 'string' }
       - { label: 'Slika', name: 'image', widget: 'image' }
       - { label: 'Besedilo', name: 'body', widget: 'markdown' }
+  - name: 'other' # Used in routes, e.g., /admin/collections/blog
+    label: 'Drugo' # Used in the UI
+    files:
+      - label: 'Nastavitve'
+        file: '_data/settings.yml'
+        fields:
+          - { label: Naslov na prvi strani, name: introTitle, widget: string }
+          - { label: Naslov za blog, name: blogTitle, widget: string }
+          - { label: Povezava na blog, name: blogMore, widget: string }
+          - { label: Delovni čas, name: hours, widget: string }
