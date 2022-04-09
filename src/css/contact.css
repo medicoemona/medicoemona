@@ -136,3 +136,7 @@ textarea {
   }
 }
 
+input[name="_honey"] {
+ position: fixed;
+ top: -9999px;
+}
