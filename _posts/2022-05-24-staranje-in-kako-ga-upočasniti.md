@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "**Staranje in kako ga upočasniti**"
+title: Staranje in kako ga upočasniti
 thumbnail: /src/img/uploads/citrus.jpg
 ---
 
