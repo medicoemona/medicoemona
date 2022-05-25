@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Staranje in kako ga upočasniti
-thumbnail: /src/img/uploads/citrus.jpg
 image: /src/img/uploads/time.jpg
 ---
 Vsak dan smo pod vplivom različnih škodljivih dejavnikov ( onesnažen zrak, elektromagnetna valovanja, mobiteli računalniki, tablice..,izpostavljenost škodljivim kemikalijam in plastični embalaži vsepovsod, konzervansi, korigensi, antibiotiki in hormoni v živilih, voda in različne pijače polni klora in drugih kemikalij “ v dovoljeni količini..).

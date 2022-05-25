@@ -55,7 +55,7 @@ layout: default
   <ol class="post_previews" role="list">
     {% for item in site.posts limit:3 %}
     <li>
-      <img src="../src/img/uploads/{{ item.image }}" alt="" /><a
+      <img src="..{{ item.image }}" alt="" /><a
         class="link"
         href="{{ item.url }}"
         >{{ item.title }}</a

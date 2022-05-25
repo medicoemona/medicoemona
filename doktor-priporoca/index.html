@@ -7,7 +7,7 @@ layout: default
   <ol class="post_previews" role="list">
     {% for post in paginator.posts %}
     <li>
-      <img src="/src/img/uploads/{{ post.image }}" alt="" /><a
+      <img src="..{{ post.image }}" alt="" /><a
         class="link"
         href="{{ post.url }}"
         >{{ post.title }}</a
